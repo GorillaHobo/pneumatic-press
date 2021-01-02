@@ -1,0 +1,40 @@
+#+TITLE: pneumatic-press
+#+AUTHOR: Galih Wicaksono
+
+* About
+This is a pneumatic press controller for automatic plastic cup sealing machine. The main function is to control a solid state relay which in turn controls a pneumatic solenoid valve in a set duration.
+Temperature control uses an analog thermistor and is *not* included in this project repo.
+
+** Modes
+1. Mode 1
+   This mode is to control the valve for a default amount of time of 3.7 seconds. The duration can be adjusted using the up/down button.
+2. Mode 2
+   Similar to the first mode but with the default time of 1 second.
+3. Manual Mode / Stopwatch
+   This  mode is to measure the duration of the start button is being pressed.
+4. Counter
+   This mode shows a counter for every time the start button is pressed in Mode 1 or Mode 2. 
+      
+
+* Bill Of Material (BOM)
+|----------------------------------+-----|
+| Component                        | Qty |
+|----------------------------------+-----|
+| Arduino Nano                     |  1x |
+| Momentary push button            |  5x |
+| Maxim Max7219                    |  1x |
+| 1KOhm Resistor                   |  5x |
+| 10KOhm                           |  1x |
+| Common Cathode 7-segment display |  4x |
+| 1N4007 Diode                     |  1x |
+| 100nF Capacitor                  |  1x |
+| 10uF 50v Electrolytic Capacitor  |  1x |
+|----------------------------------+-----|
+
+* Schmatics
+[[./schmatics/cupres.png][Schmatics]]
+
+* Dependencies
+1. [[https://www.arduino.cc/en/software][Arduino IDE]] or [[https://github.com/arduino/arduino-cli][arduino-cli]]
+2. [[https://www.arduino.cc/reference/en/libraries/ledcontrol/][LedControl library]]
+   
